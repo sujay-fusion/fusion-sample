@@ -86,12 +86,12 @@ html, body, #googft-mapCanvas {
 	if(where!="" && gold!="BOTH")
 		where+=" and ";
 	if(gold!="BOTH")
-		where+=" isGoldSold ='"+ gold + "' ";
+		where+=" IsGoldSold ='"+ gold + "' ";
 	
 	if(where!="" && diamond!="BOTH")
 		where+=" and ";
 	if(diamond!="BOTH")
-		where+=" isDiamondSold ='"+ diamond + "' ";
+		where+=" IsDiamondSold ='"+ diamond + "' ";
 	alert(where);
 	 layer.setOptions({
     query: {
