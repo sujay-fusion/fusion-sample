@@ -10,7 +10,7 @@ handlers:
 
 - url: /Assets/images/(.*\.(gif|png|jpg))
   static_files: Assets/images/\1
-  upload: static/images/(.*\.(gif|png|jpg))
+  upload: Assets/images/(.*\.(gif|png|jpg))
  
 - url: /Assets/css/(.*\.css)
   mime_type: text/css
@@ -19,7 +19,7 @@ handlers:
  
 - url: /Assets/Scripts/(.*\.js)
   mime_type: text/javascript
-  static_files: static/js/\1
+  static_files: Assets/Scripts/\1
   upload: Assets/Scripts/(.*\.js)
  
 - url: /(.*\.html)
