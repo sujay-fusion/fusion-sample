@@ -72,9 +72,48 @@ html, body, #googft-mapCanvas {
     }
   }
   
+  $('#gold').click(function() {     
+  var checked = $(this).attr('checked', true);
+  if(checked){ 
+    $(this).attr('checked', false);
+  }
+  else{ 
+    $(this).attr('checked', true);
+  }
+	});
+  
+  function applyFilter()
+  {
+	category=$('#category').val();;
+	gold=$('input[name=gold]:checked', '#myForm').val();
+	diamond=$('input[name=diamond]:checked', '#myForm').val();
+	where="";
+	if(category!="ALL")	
+		where="Category = '" + category + "'";
+	if(where!="" && gold!="BOTH")
+		where+=" and ";
+	if(gold!="BOTH")
+		where+=" isGoldSold ='"+ gold + "' ";
+	
+	if(where!="" && diamond!="BOTH")
+		where+=" and ";
+	if(diamond!="BOTH")
+		where+=" isDiamondSold ='"+ diamond + "' ";
+	alert(where);
+	 layer.setOptions({
+    query: {
+      select: location_column,
+      from: tableid,
+      where: where
+    }
+    });
+	
+  }
+  
   function changeCategory(newCategory)
   {
 	category=newCategory;
+	
 	where="";
 	if(category!='ALL')	
 		where="Category = '" + category + "'";
@@ -94,20 +133,30 @@ html, body, #googft-mapCanvas {
 <body>
   <div id="googft-mapCanvas"></div>
   <div>
+	 <form id="myForm">
+	 
       <label>Select Category:</label>
-	  <select id="category" onchange="changeCategory(this.value);">
+	  <select id="category" onchange1="changeCategory(this.value);">
       		
 		<option value="ALL" Select="Select">ALL</option>
         <option value="DAILY">DAILY</option>
 		<option value="LUXURY">LUXURY</option>
 		<option value="ANTIQUE">ANTIQUE</option>        
       </select>
-      <label>Gold:</label>
-	  <input type="radio" name="gold" value="YES" checked="checked">Yes </input>
-	  <input type="radio" name="gold" value="No">No </input>
-      <label>Diamond:</label>
-	  <input type="radio" name="diamond" value="YES" checked="checked" >Yes </input>
-	  <input type="radio" name="diamond" value="No">No </input>
+	  <br/>
+      <label>Gold Sold:</label>
+	  <input type="radio" name="gold" value="BOTH" checked="checked">Both </input>
+	  <input type="radio" name="gold" value="YES" checked="checked">YES </input>
+	  <input type="radio" name="gold" value="NO">No</input>
+	  <br/>
+      <label>Diamond Sold:</label>
+	  <input type="radio" name="diamond" value="BOTH" checked="checked">Both </input>
+	  <input type="radio" name="diamond" value="YES" checked="checked">YES </input>
+	  <input type="radio" name="diamond" value="NO">NO</input>
+	  
+	  <div><button id="radio_submit" type="button" onclick="applyFilter();">Show Selected Radio</button>
+	  </form>
     </div>
+	
 </body>
 </html>
