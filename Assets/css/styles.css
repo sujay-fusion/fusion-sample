@@ -1,0 +1,232 @@
+body {
+    margin: 0px;
+    padding: 0px;
+    font-size: 75%;
+    font-family: verdana;
+    background-color: #c2c2c2;
+}
+
+input, h1, h2, ul, ul li, select {
+    margin: 0px;
+    padding: 0px;
+}
+
+.wrapperDiv {
+    width: 90%;
+    margin: auto auto;
+    border: 1px solid #014979;
+}
+
+.header {
+    color: #fff;
+    height: 100px;
+    background-color: #014979;
+    clear: both;
+    background: url('../images/Map-banner.jpg') no-repeat right -115px #014979;
+    border-bottom: 2px solid #fff;
+}
+
+    .header h1 {
+        position: relative;
+        left: 2%;
+        font-size: 3.3em;
+        top: 23%;
+    }
+
+.contentWrapper {
+    float: left;
+    clear: both;
+    width: 99.2%;
+    background-color: #fff;
+    padding: 5px 5px 5px 5px;
+}
+
+.ltContent {
+    float: left;
+    width: 24.5%;
+    border: 1px solid #c2c2c2;
+    margin-right: 5px;
+    background-color: #F2FAFA;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    height: 461px;
+}
+
+.rtContent {
+    width: 73%;
+    float: left;
+    border: 1px solid #c2c2c2;
+    background-color: #F2FAFA;
+    padding: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
+
+.footer {
+    padding: 5px 0px 5px 0px;
+    background-color: #004976;
+    color: #fff;
+    text-align: center;
+    font-size: 0.9em;
+    clear: both;
+}
+
+.alignCenter {
+    text-align: center;
+}
+
+.customersDiv {
+    clear: both;
+    margin-top: 15px;
+}
+
+.customers {
+    float: left;
+    width: 49%;
+    margin-right: 5px;
+    border: 1px solid #c2c2c2;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    background-color: #fff;
+}
+
+.prospectiveCustomers {
+    float: left;
+    width: 49.5%;
+    border: 1px solid #c2c2c2;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    background-color: #fff;
+}
+
+.clearBoth {
+    clear: both;
+    float: left;
+    width: 100%;
+}
+
+.customersDiv h2 {
+    font-size: 0.9em;
+    padding: 5px;
+    -webkit-border-top-left-radius: 5px;
+    -webkit-border-top-right-radius: 5px;
+    -moz-border-radius-topleft: 5px;
+    -moz-border-radius-topright: 5px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.customers h2 {
+    background-color: #82af00;
+    -webkit-border-top-left-radius: 5px;
+    -webkit-border-top-right-radius: 5px;
+    -moz-border-radius-topleft: 5px;
+    -moz-border-radius-topright: 5px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    font-size: 1.0em;
+}
+
+.prospectiveCustomers h2 {
+    background-color: #7a2427;
+    color: #fff;
+    font-size: 1.0em;
+}
+
+.customersDiv ul {
+    list-style-type: none;
+    font-size: 0.8em;
+}
+
+    .customersDiv ul li {
+        margin-bottom: 5px;
+    }
+
+.ltContent h1 {
+    background-color: #004976;
+    -webkit-border-top-left-radius: 5px;
+    -webkit-border-top-right-radius: 5px;
+    -moz-border-radius-topleft: 5px;
+    -moz-border-radius-topright: 5px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    font-size: 1.0em;
+    padding: 5px 5px 5px 5px;
+    color: #fff;
+    text-align: center;
+}
+
+.ltContent select {
+    font-size: 0.9em;
+    padding: 5px;
+    border: 1px solid #C2C2C2;
+    width: 100%;
+}
+
+    .ltContent select option {
+        padding: 5px;
+    }
+
+.btnDiv {
+    margin-top: 5px;
+}
+
+    .btnDiv input {
+        padding: 5px;
+        background-color: #004976;
+        7;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        border-radius: 5px;
+        cursor: pointer;
+        color: #fff;
+        border: 1px solid #000;
+    }
+
+.legendButtons {
+    position: absolute;
+    bottom: 80px;
+    left: 10px;
+    width: auto;
+}
+
+    .legendButtons img {
+        cursor: pointer;
+    }
+
+    .legendButtons label {
+        font-weight: bold;
+        position: relative;
+        top: -15px;
+        display: inline-block;
+        width: 50px;
+        text-align: right;
+    }
+
+.customersDiv h2 img {
+    position: absolute;
+    top: -20px;
+    left: 5px;
+}
+
+.customersDiv h2 {
+    position: relative;
+    padding: 5px 5px 5px 5px;
+    text-align: center;
+}
+
+.addressDiv h2 img {
+    position: absolute;
+    top: -20px;
+    left: 5px;
+}
+
+.addressDiv h2 {
+    position: relative;
+    padding: 5px 5px 5px 5px;
+    text-align: Left;
+}

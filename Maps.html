@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Google Map - Shop Locator</title>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+    <link type="text/css" href="Assets/css/styles.css" rel="StyleSheet" />
+    <style type="text/css">
+        html {
+            height: 100%;
+        }
+
+        body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+
+        #map_canvas {
+            height:500px;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapperDiv">
+        <div class="header">
+            <h1>
+                Shop Locator
+            </h1>
+        </div>
+        <div class="contentWrapper">
+            <div class="rtContent">
+                <div id="map_canvas" class="mapDiv" style="position: relative">
+                </div>
+
+                <!--<div class="customersDiv">
+                    <div class="customers">
+                        <h2>
+                            Address
+                        </h2>
+                        <div style="padding: 5px">
+                            <ul id="ulCustomerAddresses"></ul>
+                        </div>
+                    </div>
+                </div>-->
+            </div>
+            <div style="margin-left: 20px; float: left; width: 24%">
+                <div class="addressDiv">
+                    <h4>
+                        Shop in and around
+                    </h4>
+                    <div style="padding: 5px">
+                        City : <select id="City" class="city" style="margin-left:5px ; width :75%; float:right"><option value="12.976401,77.569337">---- Select ----- </option></select>
+                        <br/>
+                        <br/>
+                        Areas : <select id="Area" class="area" style="margin-left:5px ; width :75%; float:right"><option value="12.976401,77.569337">---- Select ----- </option></select>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <br />
+
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA9n50_qW-ytUoFSg19i8YRsO8zEF8PeF8&sensor=false"></script>
+    <script type="text/javascript" src="Assets/Scripts/jquery-1.8.2.js"></script>
+    <script type="text/javascript" src="Assets/Scripts/googleMap.js"></script>
+</body>
+</html>
