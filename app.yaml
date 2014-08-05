@@ -5,8 +5,14 @@ api_version: 1
 threadsafe: yes
 
 handlers:
+ 
+- url: /(.*\.html)
+  mime_type: text/html
+  static_files: ./\1
+  upload: ./(.*\.html)
+  
 - url: /favicon\.ico
-  static_files: favicon.ico
+  static_files: favicon.ico  
   upload: favicon\.ico
 
 - url: .*
