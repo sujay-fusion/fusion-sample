@@ -5,6 +5,22 @@ api_version: 1
 threadsafe: yes
 
 handlers:
+
+ 
+
+- url: /Assets/images/(.*\.(gif|png|jpg))
+  static_files: Assets/images/\1
+  upload: static/images/(.*\.(gif|png|jpg))
+ 
+- url: /Assets/css/(.*\.css)
+  mime_type: text/css
+  static_files: Assets/css/\1
+  upload: Assets/css/(.*\.css)
+ 
+- url: /Assets/Scripts/(.*\.js)
+  mime_type: text/javascript
+  static_files: static/js/\1
+  upload: Assets/Scripts/(.*\.js)
  
 - url: /(.*\.html)
   mime_type: text/html
