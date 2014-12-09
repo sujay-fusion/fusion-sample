@@ -35,17 +35,6 @@ var initialize = function () {
     map = new google.maps.Map(document.getElementById("map_canvas"),
         mapOptions);
 
-    var panoramaOptions = {
-        position: new google.maps.LatLng(42.345573, -71.098326),
-        pov: {
-            heading: 34,
-            pitch: 10
-        }
-    };
-    var panorama = new google.maps.StreetViewPanorama(document.getElementById('pano'), panoramaOptions);
-    map.setStreetView(panorama);
-
-
     //var customControlDiv = document.createElement('div');
     //customControlDiv.setAttribute('class', 'legendButtons');
     //var polygonControl = new PolygonControl(customControlDiv);
@@ -62,10 +51,10 @@ var index = 1;
 var marker;
 
 function placeMarker(location) {
-    //if (marker) { //on vÃ©rifie si le marqueur existe
+    //if (marker) { //on vérifie si le marqueur existe
     //marker.setPosition(location); //on change sa position
     //} else {
-    //marker = new google.maps.Marker({ //on crÃ©Ã© le marqueur
+    //marker = new google.maps.Marker({ //on créé le marqueur
     //   position: location,
     //  map: map
     //});
@@ -436,8 +425,7 @@ var populateShopDetails = function () {
         "lat": "12.9267636",
         "lang": "77.5890781",
         "latlang": "12.9267636,77.5890781",
-        "areaId": "1",
-        "imageUrl": "http://maps.googleapis.com/maps/api/streetview?size=400x400&location=40.720032,-73.988354&key=AIzaSyDBX4tZxPRQjXmd7Hs2PqAFFIYavk21ew8"
+        "areaId": "1"
     };
     shopDetails[1] = {
         "name": "Girinagar",
@@ -447,8 +435,7 @@ var populateShopDetails = function () {
         "lat": "12.938004",
         "lang": "77.5444135",
         "latlang": "12.938004,77.5444135",
-        "areaId": "1",
-        "imageUrl": "http://maps.googleapis.com/maps/api/streetview?size=400x400&location=46.414382,10.013988&key=AIzaSyDBX4tZxPRQjXmd7Hs2PqAFFIYavk21ew8"
+        "areaId": "1"
     };
     shopDetails[2] = {
         "name": "RR-Nagar",
@@ -458,8 +445,7 @@ var populateShopDetails = function () {
         "lat": "12.9010269",
         "lang": "77.53921654",
         "latlang": "12.9010269,77.53921654",
-        "areaId": "1",
-        "imageUrl": "http://maps.googleapis.com/maps/api/streetview?size=400x400&location=42.345573,-71.098326&key=AIzaSyDBX4tZxPRQjXmd7Hs2PqAFFIYavk21ew8"
+        "areaId": "1"
     };
     shopDetails[3] = {
         "name": "Gavipuram",
@@ -469,8 +455,7 @@ var populateShopDetails = function () {
         "lat": "12.94754988",
         "lang": "77.5632066",
         "latlang": "12.94754988 ,77.5632066",
-        "areaId": "1",
-        "imageUrl": "http://maps.googleapis.com/maps/api/streetview?size=400x400&location=40.730031233910694, -73.99142861366272&key=AIzaSyDBX4tZxPRQjXmd7Hs2PqAFFIYavk21ew8"
+        "areaId": "1"
     };
     shopDetails[4] = {
         "name": "SanjayNagar",
@@ -480,8 +465,7 @@ var populateShopDetails = function () {
         "lat": "13.03248836",
         "lang": "77.55383949",
         "latlang": "13.03248836, 77.55383949",
-        "areaId": "2",
-        "imageUrl": "http://maps.googleapis.com/maps/api/streetview?size=400x400&location=40.729884, -73.990988&key=AIzaSyDBX4tZxPRQjXmd7Hs2PqAFFIYavk21ew8"
+        "areaId": "2"
     };
     shopDetails[5] = {
         "name": "Hebbal",
@@ -491,8 +475,7 @@ var populateShopDetails = function () {
         "lat": "13.01709513",
         "lang": "77.55762291",
         "latlang": "13.01709513, 77.55762291",
-        "areaId": "2",
-        "imageUrl": "http://maps.googleapis.com/maps/api/streetview?size=400x400&location=40.72968163306612, -73.9911389350891&key=AIzaSyDBX4tZxPRQjXmd7Hs2PqAFFIYavk21ew8"
+        "areaId": "2"
     };
     shopDetails[6] = {
         "name": "Banaswadi",
@@ -502,8 +485,7 @@ var populateShopDetails = function () {
         "lat": "13.01256593",
         "lang": "77.65018903",
         "latlang": "13.01256593,77.65018903",
-        "areaId": "2",
-        "imageUrl": "http://maps.googleapis.com/maps/api/streetview?size=400x400&location=40.730031233910694, -73.99142861366272&key=AIzaSyDBX4tZxPRQjXmd7Hs2PqAFFIYavk21ew8"
+        "areaId": "2"
     };
 
 };
@@ -627,22 +609,10 @@ var ShowShopOnMap = function () {
 
                 infowindow.setContent(shopCollForMarking[i].address);
                 infowindow.open(map, marker);
-                var position = marker.position;               
-              
-                $("#locationPhoto").attr("src", shopCollForMarking[i].imageUrl ); //getImageUrl(position.lat(),position.lng()));
-                
-             
             }
         })(marker, i));
     }
 };
-
-var getImageUrl = function (lat,lang) {
-
-    return "http://maps.googleapis.com/maps/api/streetview?size=400x400&location=" + lat +","+ lang;
-};
-
-
 
 var formatVarString = function () {
     var args = [].slice.call(arguments);
